@@ -4,15 +4,86 @@
   box-sizing: border-box;
 }
 
-.main {
+@font-face{
+  font-family: spencerian;
+  src: url(../public/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+.mainnav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Logo {
+  display: flex;
+  max-width: 100px;
+  margin-left: 50px;
+  position: relative;
+  top: -12px;
+  left: -39px;
+  cursor: pointer;
+}
+
+.mainnav ul {
+  text-decoration: none;
+  margin-right: 70px;
+}
+
+.mainnav ul li {
+  display: inline-flex;
+  margin: 29px;
+}
+
+.mainnav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: spencerian;
+  font-size: 0.79rem;
+  font-weight: 400;
+}
+
+.mainnav ul li a::after {
+  content: "";
+  position: relative;
+  background-color: white;
+  height: 1.7px;
+  width: 0;
+  left: 0;
+  bottom: 2px;
+  transition: 0.3s;
+  display: block;
+}
+
+.mainnav ul li a:hover{
+  color: #fff;
+}
+
+.mainnav ul li a:hover::after {
+  width: 100%;
+
+}
+
+.more {
+  position: relative;
+  top: 27px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.navba {
+  position: absolute;
   width: 100%;
   height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 .overlay {
@@ -20,6 +91,6 @@ video {
   top: 0;
   left: 0;
   width: 100%;
-  height: 123%;
-  background-color: rgba(0, 0, 0, .5);
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
 }
